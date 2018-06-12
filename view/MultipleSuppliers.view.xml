@@ -1,0 +1,75 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:View	xmlns:core="sap.ui.core"
+			controllerName="ui.s2p.mm.purord.fromrequisition.view.MultipleSuppliers"
+			xmlns="sap.m" 
+			xmlns:layout="sap.ui.layout">
+	<layout:VerticalLayout class="sapMContainerMargin">
+		<layout:content>
+			<Text id="above" text="{i18n>view.MultipleSuppliers.title}">
+			</Text>
+		</layout:content>
+	</layout:VerticalLayout>
+
+	<List id="supplist"
+	       items="{/}"
+	       visible="true"
+	       mode="None">
+		<items>
+			<CustomListItem id="listitem">
+				<content>
+					<ObjectHeader title="{FixedVendorName}" introActive="false"
+						titleActive="false" iconActive="false"
+						number="{path:'NetOrderValue', formatter:'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatNumber'}"
+						unit="{Currency}">
+						<statuses>
+							<ObjectStatus icon="{path: 'Error', formatter: '.formatPriceError'}"
+								state="Error"></ObjectStatus>
+						</statuses>
+						<attributes>
+							<ObjectAttribute
+								text="{parts:[ {path:'NetPrice'}, {path:'Currency'}, {path:'PriceUnit'},
+									{path:'OrderPriceUnitDescription'}],
+									formatter: 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatUnitPriceL' }">
+							</ObjectAttribute>
+							<ObjectAttribute
+								text="{parts:[ {path:'CashDiscountDays1'},{path:'CashDiscountPercentage1'},{path:'CashDiscountDays2'},
+									{path:'CashDiscountPercentage2'} ,{path:'CashDiscountDays2'}, {path:'PaymentTermsDescription'}],
+									formatter: 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatPaymentTermsL' }">
+							</ObjectAttribute>
+							<ObjectAttribute
+								text="{parts:[ {path:'Incoterms1'},{path:'Incoterms2'} ],
+									formatter: 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatIncotermsL' }">
+							</ObjectAttribute>
+
+							<ObjectAttribute
+								text="{parts: [ {path: 'Agreement'}, {path: 'AgreementItem'}, {path: 'InfoRecord'}, {path: 'DocumentCategory'}],
+									formatter: 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatSourceL' }">
+							</ObjectAttribute>
+							<ObjectAttribute
+								text="{path: 'DocumentCategory',
+									formatter: 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatErrorMessageDocCategory' }">
+							</ObjectAttribute>
+						</attributes>
+
+					</ObjectHeader>
+
+					<layout:HorizontalLayout class="sapMContainerMargin">
+						<layout:content>
+							<Button text="{i18n>view.POfromPR.assign_tit}" press="onSupplierAssign"
+								enabled="{parts: [{path:'Error'}, {path: 'DocumentCategory'}], formatter: '.formatAssignButton'}">
+							</Button>
+							<Button text="{i18n>view.POfromPR_Messages.show_details}"
+								press="onSupplierLink">
+							</Button>
+						</layout:content>
+					</layout:HorizontalLayout>
+
+				</content>
+			</CustomListItem>
+		</items>
+	</List>
+</core:View>

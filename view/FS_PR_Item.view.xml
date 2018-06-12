@@ -1,0 +1,236 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:View	xmlns:core="sap.ui.core" 
+			xmlns="sap.m"
+			xmlns:form="sap.ui.layout.form" 
+			xmlns:layout="sap.ui.layout"
+			xmlns:me="sap.me"
+			controllerName="ui.s2p.mm.purord.fromrequisition.view.FS_PR_Item">
+	<Page id="pg_FS_PR_Item" 
+		  class="sapUiFioriObjectPage">
+	
+        <customHeader>
+            <Bar>
+                <contentLeft>
+                    <Button press="onBack" icon="sap-icon://nav-back"></Button>
+                </contentLeft>
+                <contentMiddle>
+                    <Label text="{i18n>fs.pritem.title}"></Label>
+                </contentMiddle>
+                <contentRight> 
+                	<Button id="btnPreviousPRItem" icon="sap-icon://up"  press="onOtherPRItem"></Button>
+                	<Button id="btnNextPRItem"     icon="sap-icon://down" press="onOtherPRItem"></Button>
+                </contentRight>
+            </Bar>
+        </customHeader>
+        
+        <content>
+            <ObjectHeader 
+            	title="{parts:[{path:'PR_item_model>/PRNumberFormatted'},{path:'PR_item_model>/PRItemFormatted'}], formatter:'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatPRItem'}"
+                number="{path:'PR_item_model>/Value', formatter:'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatNumber'}"
+                numberUnit="{PR_item_model>/Currency}">
+                <attributes>
+                    <ObjectAttribute text="{PR_item_model>/ProductDescription}"> </ObjectAttribute>
+                </attributes>
+            </ObjectHeader>
+
+					<form:Form>
+						<form:layout>
+							<form:ResponsiveLayout></form:ResponsiveLayout>
+						</form:layout>
+						<form:formContainers>
+							<form:FormContainer>
+								<form:layoutData>
+									<layout:ResponsiveFlowLayoutData
+										linebreak="true" margin="false"></layout:ResponsiveFlowLayoutData>
+								</form:layoutData>
+
+								<form:formElements>
+									<!-- Requested by -->
+									<form:FormElement>
+										<form:layoutData>
+											<layout:ResponsiveFlowLayoutData
+												linebreak="true" margin="false"></layout:ResponsiveFlowLayoutData>
+										</form:layoutData>
+										<form:label>
+											<Label text="{i18n>view.PR_Factsheet.requestor}"></Label>
+										</form:label>
+										<form:fields>
+											<Text text="{PR_item_model>/RequestedByUserName}">
+												<layoutData>
+													<layout:ResponsiveFlowLayoutData
+														weight="2"></layout:ResponsiveFlowLayoutData>
+												</layoutData>
+											</Text>
+										</form:fields>
+									</form:FormElement>
+
+									<!-- Material -->
+									<form:FormElement>
+										<form:layoutData>
+											<layout:ResponsiveFlowLayoutData
+												linebreak="true" margin="false"></layout:ResponsiveFlowLayoutData>
+										</form:layoutData>
+										<form:label>
+											<Label text="{i18n>view.PR_List.column_mat}"></Label>
+										</form:label>
+										<form:fields>
+											<Text text="{parts:[{path : 'PR_item_model>/ProductDescription'},{path: 'PR_item_model>/ProductID'}], 
+											             formatter : 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatItemDesc'}">
+												<layoutData>
+													<layout:ResponsiveFlowLayoutData
+														weight="2"></layout:ResponsiveFlowLayoutData>
+												</layoutData>
+											</Text>
+										</form:fields>
+									</form:FormElement>
+
+									<!-- Quantity -->
+									<form:FormElement>
+										<form:layoutData>
+											<layout:ResponsiveFlowLayoutData
+												linebreak="true" margin="false"></layout:ResponsiveFlowLayoutData>
+										</form:layoutData>
+										<form:label>
+											<Label text="{i18n>view.PO_List.quantity}"></Label>
+										</form:label>
+										<form:fields>
+											<Text text="{parts:[{path : 'PR_item_model>/OpenQuantityFormatted'},{path: 'PR_item_model>/OpenQuantityUnitDescription'}], 
+											             formatter : 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatQuantityandUnit'}">
+												<layoutData>
+													<layout:ResponsiveFlowLayoutData
+														weight="2"></layout:ResponsiveFlowLayoutData>
+												</layoutData>
+											</Text>
+										</form:fields>
+									</form:FormElement>
+
+									<!-- Price per unit -->
+									<form:FormElement>
+										<form:layoutData>
+											<layout:ResponsiveFlowLayoutData
+												linebreak="true" margin="false"></layout:ResponsiveFlowLayoutData>
+										</form:layoutData>
+										<form:label>
+											<Label text="{i18n>fs.pritem.price_per_unit}"></Label>
+										</form:label>
+										<form:fields>
+											<Text text="{parts:[{path:'PR_item_model>/Price'},{path:'PR_item_model>/Currency'},{path:'PR_item_model>/PriceUnit'},{path:'PR_item_model>/OrderPriceUnitDescription'}], 
+											            formatter:'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatPricePerUnit'}">
+												<layoutData>
+													<layout:ResponsiveFlowLayoutData
+														weight="2"></layout:ResponsiveFlowLayoutData>
+												</layoutData>
+											</Text>
+										</form:fields>
+									</form:FormElement>
+
+									<!-- Material Group -->
+									<form:FormElement>
+										<form:layoutData>
+											<layout:ResponsiveFlowLayoutData
+												linebreak="true" margin="false"></layout:ResponsiveFlowLayoutData>
+										</form:layoutData>
+										<form:label>
+											<Label text="{i18n>view.PR_Factsheet.mat_group}"></Label>
+										</form:label>
+										<form:fields>
+											<Text text="{parts:[{path : 'PR_item_model>/MaterialGroupDescription'},{path: 'PR_item_model>/MaterialGroup'}], 
+											             formatter : 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatItemDesc'}">
+												<layoutData>
+													<layout:ResponsiveFlowLayoutData
+														weight="2"></layout:ResponsiveFlowLayoutData>
+												</layoutData>
+											</Text>
+										</form:fields>
+									</form:FormElement>
+
+									<!-- Delivery on -->
+									<form:FormElement>
+										<form:layoutData>
+											<layout:ResponsiveFlowLayoutData
+												linebreak="true" margin="false"></layout:ResponsiveFlowLayoutData>
+										</form:layoutData>
+										<form:label>
+											<Label text="{i18n>fs.pritem.delivery_on}"></Label>
+										</form:label>
+										<form:fields>
+											<Text text="{path:'PR_item_model>/DeliveryDate', formatter:'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatDateLong' }">
+												<layoutData>
+													<layout:ResponsiveFlowLayoutData
+														weight="2"></layout:ResponsiveFlowLayoutData>
+												</layoutData>
+											</Text>
+										</form:fields>
+									</form:FormElement>
+
+									<!-- Delivery to -->
+									<form:FormElement>
+										<form:layoutData>
+											<layout:ResponsiveFlowLayoutData
+												linebreak="true" margin="false"></layout:ResponsiveFlowLayoutData>
+										</form:layoutData>
+										<form:label>
+											<Label text="{i18n>fs.pritem.delivery_to}"></Label>
+										</form:label>
+										<form:fields>
+											<Text text="{PR_item_model>/DeliveryAddressFormatted}" maxLines="0">
+												<layoutData>
+													<layout:ResponsiveFlowLayoutData
+														weight="2"></layout:ResponsiveFlowLayoutData>
+												</layoutData>
+											</Text>
+										</form:fields>
+									</form:FormElement>
+
+									<!-- Plant -->
+									<form:FormElement>
+										<form:layoutData>
+											<layout:ResponsiveFlowLayoutData
+												linebreak="true" margin="false"></layout:ResponsiveFlowLayoutData>
+										</form:layoutData>
+										<form:label>
+											<Label text="{i18n>view.PO_List.plant}"></Label>
+										</form:label>
+										<form:fields>
+											<Text text="{parts:[{path : 'PR_item_model>/ShipToPlantDescription1'},{path: 'PR_item_model>/ShipToPlant'}], 
+											             formatter : 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatItemDesc'}">
+												<layoutData>
+													<layout:ResponsiveFlowLayoutData weight="2"></layout:ResponsiveFlowLayoutData>
+												</layoutData>
+											</Text>
+										</form:fields>
+									</form:FormElement>
+
+									<!-- Supplier or Supplying Plant -->
+									<form:FormElement>
+										<form:layoutData>
+											<layout:ResponsiveFlowLayoutData
+												linebreak="true" margin="false"></layout:ResponsiveFlowLayoutData>
+										</form:layoutData>
+										<form:label>
+											<Label text="{i18n>view.PO_List.supplier}"></Label>
+										</form:label>
+										<form:fields>
+											<Link id="lnkSupplier" press="onSupplierLink" 
+											    text="{parts:[{path:'PR_item_model>/SupplierName'},{path:'PR_item_model>/SupplyingPlantDescription'}], formatter : '.formatSupplierOrPlant'}">
+												<layoutData>
+													<layout:ResponsiveFlowLayoutData weight="2"></layout:ResponsiveFlowLayoutData>
+												</layoutData>
+											</Link>
+										</form:fields>
+									</form:FormElement>
+
+								</form:formElements>
+
+							</form:FormContainer>
+
+						</form:formContainers>
+					</form:Form>
+        </content>
+
+	</Page>
+</core:View>

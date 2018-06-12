@@ -1,0 +1,136 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form"
+	controllerName="ui.s2p.mm.purord.fromrequisition.view.FS_Supplier">
+	<Page id="FS_Supplier_Page"
+		  class="sapUiFioriObjectPage">
+
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button press="onBack" icon="sap-icon://nav-back"></Button>
+				</contentLeft>
+				<contentMiddle>
+					<Label text="{i18n>view.Supplier_Factsheet.header}"></Label>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+
+		<content>
+
+			<ObjectHeader title="{supplier_model>/VendorName}">
+				<attributes>
+					<ObjectAttribute text="{supplier_model>/Address}"></ObjectAttribute>
+					<!-- @ExtensionPoint supplier details: header -->
+					<core:ExtensionPoint name="supplierDetailsHeader" />
+				</attributes>
+			</ObjectHeader>
+
+			<!-- Contact Contact Info -->
+			<form:SimpleForm id="ContactInfo" minWidth="1024" editable="false"
+				labelMinWidth="-1" maxContainerCols="2">
+				<form:content>
+				<!-- 	<core:Title text="{i18n_c>XTIT_BC_CONTACTINFO}"></core:Title> -->
+					<core:Title text="{i18n>XTIT_BC_CONTACTINFO}"></core:Title>					
+				<!-- 	<Label text="{i18n_c>XTIT_BC_SupplierContact}"> -->
+					<Label text="{i18n>XTIT_BC_SupplierContact}">					
+					</Label>
+					<Text text="{supplier_model>/SupplierContactCollection/results/0/ContactName}">
+					</Text>
+					<Label text="{i18n>view.Supplier_Factsheet.phone}">
+					</Label>
+					<Link id="bcContactPhone" press="onTapPhone"
+						text="{supplier_model>/SupplierContactCollection/results/0/WorkPhone}">
+					</Link>
+			<!-- 		<Label text="{i18n_c>XFLD_BC_MOBILE}"> -->
+					<Label text="{i18n>XFLD_BC_MOBILE}">					
+					</Label>
+					<Link id="bcContactMobile" press="onTapPhone"
+						text="{supplier_model>/SupplierContactCollection/results/0/MobilePhone}">
+					</Link>
+					<Label text="{i18n>view.Supplier_Factsheet.fax}">
+					</Label>
+					<Text text="{supplier_model>/Fax}">
+					</Text>
+					<Label text="{i18n>view.Supplier_Factsheet.website}">
+					</Label>
+					<Link press="onTapWebsite" text="{supplier_model>/Url}">
+					</Link>
+					<Label text="{i18n>view.Supplier_Factsheet.Mail}">
+					</Label>
+					<Link press="onTapEmail" text="{supplier_model>/SupplierContactCollection/results/0/Email}">
+					</Link>
+					<!-- @ExtensionPoint supplier details: contact details -->
+					<core:ExtensionPoint name="supplierDetailsContact" />
+				</form:content>
+			</form:SimpleForm>
+			<!-- Supplier Details -->
+			<form:SimpleForm id="SupplierDetail" minWidth="1024" editable="false">
+				<form:content>
+					<core:Title text="{i18n>view.Supplier_Factsheet.header}"></core:Title>
+					<Label text="{i18n>view.Supplier_Factsheet.CustID}">
+					</Label>
+					<Text text="{supplier_model>/OurAccountWithVendor}" maxLines="0">
+					</Text>
+					<Label text="{i18n>view.Supplier_Factsheet.class}">
+					</Label>
+					<Text text="{supplier_model>/ABCIndicator}" maxLines="0">
+					</Text>
+					<Label text="{i18n>view.Supplier_Factsheet.Industry}">
+					</Label>
+					<Text text="{supplier_model>/IndustryDescription}" maxLines="0">
+					</Text>
+					<Label text="{i18n>view.Supplier_Factsheet.Status}">
+					</Label>
+					<Text id="SupplierStatus"
+						text="{parts:[ {path:'supplier_model>/OrgPurchasingBlock'},{path:'supplier_model>/CentralPurchasingBlock'},
+							{path:'supplier_model>/CentralPostingBlock'},{path:'supplier_model>/CompanyPostingBlock'}],
+							formatter: 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatSupplierStatus' }">
+					</Text>
+					<!-- @ExtensionPoint supplier details: supplier data -->
+					<core:ExtensionPoint name="supplierDetailsData" />
+				</form:content>
+			</form:SimpleForm>
+			<!-- Purchasing Data -->
+			<form:SimpleForm id="PurchasingData" minWidth="1024" editable="false">
+				<form:content>
+					<core:Title text="{i18n>view.Supplier_Factsheet.Purch_header}"></core:Title>
+					<Label text="{i18n>view.MultipleSuppliers.payment_terms}">
+					</Label>
+					<Text id="payment"
+						text="{parts:[ {path:'supplier_model>/CashDiscountDays1'},{path:'supplier_model>/CashDiscountPercentage1'},
+							{path:'supplier_model>/CashDiscountDays2'},{path:'supplier_model>/CashDiscountPercentage2'}, 
+							{path:'supplier_model>/CashDiscountDays2'}, {path:'supplier_model>/PaymentTermsDescription'}],
+								formatter: 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatPaymentTerms' }">
+					</Text>
+					<Label text="{i18n>view.MultipleSuppliers.inco_terms}">
+					</Label>
+					<Text
+						text="{parts:[ {path:'supplier_model>/Incoterms1'},{path:'supplier_model>/Incoterms2'} ],
+								formatter: 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatIncoterms' }">
+					</Text>
+					<Label text="{i18n>view.Supplier_Factsheet.Min_Purch_Val}">
+					</Label>
+					<Text
+						text="{path:'supplier_model>/MinimumOrderValue', formatter:'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatNumber'}">
+					</Text>
+					<Label text="{i18n>view.Supplier_Factsheet.receipt_settle}">
+					</Label>
+					<Text
+						text="{parts:[ {path:'supplier_model>/EvaluatedReceiptSettlement'} ],
+								formatter: 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatReceiptSettlement' }">
+					</Text>
+					<!-- @ExtensionPoint supplier details: purchasing data -->
+					<core:ExtensionPoint name="supplierDetailsPurData" />
+				</form:content>
+			</form:SimpleForm>
+
+			<!-- @ExtensionPoint supplier details: additional customer data -->
+			<core:ExtensionPoint name="supplierDetailsAddData" />
+		</content>
+	</Page>
+</core:View>

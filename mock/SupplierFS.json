@@ -1,0 +1,222 @@
+{
+    "items": [
+        {
+            "ABCIndicator": "A",
+            "Address": "Am Kronberger Hang 6 / 65824 Schwalbach am Taunus",
+            "CashDiscountDays1": "14",
+            "CashDiscountPercentage1": "2.000",
+            "CashDiscountDays2": "30",
+            "CashDiscountPercentage2": "0.000",
+            "CashDiscountDays3": "0",
+            "CentralPostingBlock": "",
+            "CentralPurchasingBlock": "",
+            "CompanyCode": "1000",
+            "Currency": "EUR",
+            "Email": "info@samsung.com",
+            "EvaluatedReceiptSettlement": "X",
+            "Fax": "+49 (6894) 55501-100",
+            "Incoterms1": "FH",
+            "Incoterms2": "Schwalbach",
+            "IndustryDescription": "Trade",
+            "MinimumOrderValueFormatted": "100,00",
+            "MinimumOrderValue": "100.00",            
+            "OurAccountWithVendor": "CUST_IDES DE",
+            "PurchasingOrganization": "1000",
+            "Url": "www.samsung.de",
+            "VendorId": "0",
+            "VendorName": "SAMSUNG",
+            "SupplierContactCollection": {
+                "results": [
+                    {
+                        "Address": "Am Kronberger Hang 6 / 65824 Schwalbach am Taunus",
+                        "ContactId": "0000152786",
+                        "ContactName": "Max Lauterer",
+                        "Department": "IT",
+                        "Email": "Lauterer@samsung.com",
+                        "MobilePhone": "+49 (151) 76512",
+                        "Name": "SAMSUNG",
+                        "WorkPhone": "+49 (12443) 44444"
+                    }
+                ]
+            }
+        },
+        {
+            "ABCIndicator": "A",
+            "Address": "991D Alexandra Road / #01-14 Singapore 119972",
+            "CashDiscountDays1": "14",
+            "CashDiscountDays2": "30",
+            "CashDiscountDays3": "45",
+            "CashDiscountPercentage1": "3.000",
+            "CashDiscountPercentage2": "2.000",
+            "CentralPostingBlock": "",
+            "CentralPurchasingBlock": "",
+            "CompanyCode": "1000",
+            "Currency": "EUR",
+            "Email": "info@LG.Limited.berlin.com",
+            "EvaluatedReceiptSettlement": "X",
+            "Fax": "+49 (6894) 55501-100",
+            "Incoterms1": "EXW",
+            "Incoterms2": "Walldorf",
+            "IndustryDescription": "Trade",
+            "IndustryKey": "TRAD",
+            "MimeType": "",
+            "MinimumOrderValue": "100.00",
+            "MinimumOrderValueFormatted": "100,00",
+            "MinimumOrderValue": "100.00",
+            "NameOfControllingArea": "From plant",
+            "OrgPurchasingBlock": "",
+            "OurAccountWithVendor": "Cust0815",
+            "PurchasingOrganization": "1000",
+            "Url": "www.lg.com",
+            "VendorId": "1",
+            "VendorName": "LG Limited",
+            "SupplierContactCollection": {
+                "results": [
+                    {
+                        "Address": "991D Alexandra Road / #01-14 Singapore 119972",
+                        "ContactId": "0000152786",
+                        "ContactName": "Nihal Singh",
+                        "Department": "IT",
+                        "Email": "Sing@lg.com",
+                        "MobilePhone": "+65 (22342) 76512",
+                        "Name": "LG Limited",
+                        "VendorId": "0000001000",
+                        "WorkPhone": "+65 12 0555"
+                    }
+                ]
+            }
+        },
+        {
+            "ABCIndicator": "A",
+            "Address": "Oil Company",
+            "CashDiscountDays1": "14",
+            "CashDiscountPercentage1": "2.000",
+            "CashDiscountDays2": "30",
+            "CashDiscountPercentage2": "0.000",
+            "CashDiscountDays3": "0",
+            "CentralPostingBlock": "",
+            "CentralPurchasingBlock": "",
+            "CompanyCode": "1000",
+            "Currency": "EUR",
+            "Email": "info@samsung.com",
+            "EvaluatedReceiptSettlement": "X",
+            "Fax": "+971-2-602332323",
+            "Incoterms1": "FH",
+            "Incoterms2": "Walldorf",
+            "IndustryDescription": "Trade",
+            "MinimumOrderValueFormatted": "100,00",
+            "MinimumOrderValue": "100.00",            
+            "OurAccountWithVendor": "ID828282",
+            "PurchasingOrganization": "1000",
+            "Url": "www.Oil_Company.org",
+            "VendorId": "2",
+            "VendorName": "Oil Company",
+            "SupplierContactCollection": {
+                "results": [
+                    {
+                        "Address": "P.O. Box : 727. Abu Dhabi / United Arab Emirates",
+                        "ContactId": "0000152786",
+                        "ContactName": "Ali Abduhl",
+                        "Department": "IT",
+                        "Email": "info@Oil_Company.com",
+                        "MobilePhone": "+971-4-2662239 ",
+                        "Name": "Oil Company",
+                        "WorkPhone": "+971-2-6020000"
+                    }
+                ]
+            }
+        },
+        {
+            "ABCIndicator": "A",
+            "Address": "991D Alexandra Road / #01-14 Singapore 119972",
+            "CashDiscountDays1": "14",
+            "CashDiscountDays2": "30",
+            "CashDiscountDays3": "45",
+            "CashDiscountPercentage1": "3.000",
+            "CashDiscountPercentage2": "2.000",
+            "CentralPostingBlock": "",
+            "CentralPurchasingBlock": "",
+            "CompanyCode": "1000",
+            "Currency": "EUR",
+            "Email": "info@Sony.com",
+            "EvaluatedReceiptSettlement": "X",
+            "Fax": "81-3-6748-2111",
+            "Incoterms1": "EXW",
+            "Incoterms2": "Tokyo",
+            "IndustryDescription": "Trade",
+            "IndustryKey": "TRAD",
+            "MimeType": "",
+            "MinimumOrderValue": "100.00",
+            "MinimumOrderValueFormatted": "100,00",
+            "MinimumOrderValue": "100.00",            
+            "NameOfControllingArea": "From plant",
+            "OrgPurchasingBlock": "",
+            "OurAccountWithVendor": "ID83773",
+            "PurchasingOrganization": "1000",
+            "Url": "www.sony.com",
+            "VendorId": "1",
+            "VendorName": "SONY",
+            "SupplierContactCollection": {
+                "results": [
+                    {
+                        "Address": "-10-1 Osaki, Shinagawa-ku, Tokyo / 141-8610 / Japan",
+                        "ContactId": "0000152786",
+                        "ContactName": "Itsuka Li",
+                        "Department": "IT",
+                        "Email": "Itsuka.Li@sony.com",
+                        "MobilePhone": "+81-3-6748-2111",
+                        "Name": "Sony",
+                        "VendorId": "0000001000",
+                        "WorkPhone": "81-26622-21115"
+                    }
+                ]
+            }
+        },
+        {
+            "ABCIndicator": "A",
+            "Address": "Unit 1, 9-11 South Street / Rydalmere NSW 2116 Australia",
+            "CashDiscountDays1": "14",
+            "CashDiscountDays2": "30",
+            "CashDiscountDays3": "45",
+            "CashDiscountPercentage1": "3.000",
+            "CashDiscountPercentage2": "2.000",
+            "CentralPostingBlock": "",
+            "CentralPurchasingBlock": "",
+            "CompanyCode": "1000",
+            "Currency": "EUR",
+            "Email": "sales@toshibatec.com.au",
+            "EvaluatedReceiptSettlement": "X",
+            "Fax": "+61 2 8845 1123",
+            "Incoterms1": "EXW",
+            "Incoterms2": "Sydney",
+            "IndustryDescription": "Trade",
+            "IndustryKey": "TRAD",
+            "MimeType": "",
+            "MinimumOrderValue": "100.00",
+            "MinimumOrderValueFormatted": "100,00",
+            "MinimumOrderValue": "100.00",            
+            "NameOfControllingArea": "From plant",
+            "OrgPurchasingBlock": "",
+            "OurAccountWithVendor": "ID83773",
+            "PurchasingOrganization": "1000",
+            "Url": "http://www.toshibatec.com.au/",
+            "VendorId": "4",
+            "VendorName": "Toshiba",
+            "SupplierContactCollection": {
+                "results": [
+                    {
+                        "Address": "Unit 1, 9-11 South Street / Rydalmere NSW 2116 Australia",
+                        "ContactId": "0000152786",
+                        "ContactName": "Liane Howard",
+                        "Department": "IT",
+                        "Email": "howard@toshiba.com",
+                        "MobilePhone": "+61 2 3334331",
+                        "Name": "Toshiba",
+                        "VendorId": "0000001000",
+                        "WorkPhone": "+61 2 34343 2232"
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m"
+	 controllerName="ui.s2p.mm.purord.fromrequisition.view.PO_Created">
+
+	<!-- purchase requisition list with assigned suppliers -->
+	<Table id="PO_Created_List" items="{savedPOs>/results}" inset="false"
+		noDataText="{i18n>view.PO_Created.no_data}">
+		<!-- Columns -->
+		<columns>
+			<!-- Purchase Order Number -->
+			<Column id="po_id" width="14%">
+				<header>
+					<Text id="label1" text="{i18n>view.PO_List.po_id}" wrapping="true"></Text>
+				</header>
+			</Column>
+			<!-- Supplier -->
+			<Column id="supplier" demandPopin="false">
+				<header>
+					<Text id="label2" text="{i18n>view.PO_List.supplier}"
+						wrapping="true" ></Text>
+				</header>
+			</Column>
+			<!-- Line Items -->
+			<Column id="line_items">
+				<header>
+					<Text id="label3" text="{i18n>view.PO_List.line_items}"
+						wrapping="true"></Text>
+				</header>
+			</Column>
+			<!-- Line Items Quantity -->
+			<Column id="quantity" width="15%" hAlign="End">
+				<header>
+					<Text id="label4" text="{i18n>view.PO_List.quantity}"
+						textAlign="End" wrapping="true"></Text>
+				</header>
+			</Column>
+			<!-- Total -->
+			<Column id="Total" hAlign="End">
+				<header>
+					<Text id="label5" text="{i18n>view.PO_List.total}" textAlign="End"
+						wrapping="true"></Text>
+				</header>
+			</Column>
+		</columns>
+		<!-- Column list item -->
+        <items>
+            <ColumnListItem id="list_item" type="Inactive">
+                <cells>
+                    <ObjectIdentifier title="{savedPOs>PONumberFormatted}" text="{savedPOs>text}" badgeNotes="false" badgePeople="false" badgeAttachments="false"></ObjectIdentifier>
+                    <Text text="{savedPOs>SupplierName}"></Text>
+                </cells>
+            </ColumnListItem>
+        </items>		
+	</Table>
+</core:View>

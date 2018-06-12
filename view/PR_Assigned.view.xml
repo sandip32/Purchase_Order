@@ -1,0 +1,120 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m"
+	xmlns:layout="sap.ui.layout" controllerName="ui.s2p.mm.purord.fromrequisition.view.PR_Assigned">
+
+
+	<!-- purchase requisition list with assigned suppliers -->
+	<Table id="pralist" mode="MultiSelect" items="{PR_ass_model>/PRItemCollection}"
+		inset="false">
+
+		<!-- column descriptions -->
+		<columns>
+			<!-- ID column -->
+			<Column id="column1" width="14%">
+				<header>
+					<Text id="l1" text="{i18n>view.PR_List.column_id}" wrapping="true"></Text>
+				</header>
+			</Column>
+			<!-- the exception column -->
+			<Column id="column0" width="4%" visible="true">
+			</Column>
+			<!-- Assigned Supplier column -->
+			<Column id="column3" width="17%">
+				<header>
+					<Text id="l3" text="{i18n>view.PR_List.column_supp}" wrapping="true"></Text>
+				</header>
+			</Column>
+			<!-- the edit Icon column -->
+			<Column id="column3a" width="3%" visible="true"></Column>
+			<!-- Material -->
+			<Column id="column4" width="25%">
+				<header>
+					<Text id="l4" text="{i18n>view.PR_List.column_mat}" wrapping="true"></Text>
+				</header>
+			</Column>
+			<!-- Delivery Date -->
+			<Column id="column5" width="15%" hAlign="End" minScreenWidth="large"
+				demandPopin="true">
+				<header>
+					<Text id="l5" text="{i18n>view.PR_List.column_delivery}"
+						wrapping="true" textAlign="End"></Text>
+				</header>
+			</Column>
+			<!-- Value -->
+			<Column id="column6" hAlign="End">
+				<header>
+					<Text id="l6" text="{i18n>view.PR_List.column_val}" textAlign="End"
+						wrapping="true"></Text>
+				</header>
+			</Column>
+		</columns>
+
+
+		<items>
+			<ColumnListItem id="listitem" selected="{PR_ass_model>ItemSelected}">
+				<cells>
+					<!-- purchase req (items?) -->
+					<Link id="prnr" press="onPRItem"
+						text="{parts:[{path:'PR_ass_model>PRNumberFormatted'},{path:'PR_ass_model>PRItemFormatted'}], formatter:'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatPRItem'}"></Link>
+					<!-- error icon for error -->
+					<core:Icon id="err" press="onErrorShow" size="1.375em"
+						src="{ path:'PR_ass_model>Error', formatter: '.exceptionFormatter' }" color="{path:'PR_ass_model>Error', formatter: '.exceptionColorFormatter' }"></core:Icon>
+					<!-- supplier -->
+					<layout:HorizontalLayout>
+						<layout:content>
+							<Link id="supp" press="onSupplierLink"
+								text="{parts:[{path:'PR_ass_model>SupplierName'},{path:'PR_ass_model>SupplyingPlantDescription'}], formatter:'.formatSourceOfSupply'}"></Link>
+						</layout:content>
+					</layout:HorizontalLayout>
+					<layout:VerticalLayout id="vmult" visible="{PR_ass_model>SupplierMultiple}">
+						<layout:content>
+							<core:Icon id="mult" press="onSupplierChange" src="sap-icon://edit"></core:Icon>
+						</layout:content>
+					</layout:VerticalLayout>
+
+					<!-- material -->
+					<layout:VerticalLayout>
+						<layout:content>
+							<Text id="matinfo"
+								text="{parts:[{path : 'PR_ass_model>ProductDescription'},{path: 'PR_ass_model>ProductID'}], 
+                                   formatter : 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatItemDesc'}"></Text>
+							<Text id="quantity"
+								text="{parts:[ {path:'PR_ass_model>OpenQuantityFormatted'},
+					                       {path:'PR_ass_model>OpenQuantityUnitDescription'}], 
+				                   formatter: 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatMatQuantity'}"></Text>
+
+							<Text id="priceperquantity"
+								text="{parts:[ {path:'PR_ass_model>Price'}, 
+										    {path:'PR_ass_model>Currency'},
+										    {path:'PR_ass_model>PriceUnit'},
+										    {path:'PR_ass_model>OrderPriceUnitDescription'}], 
+					                   formatter: 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatUnitPrice'}"></Text>
+						</layout:content>
+					</layout:VerticalLayout>
+					<!-- shipping/delivery -->
+					<layout:VerticalLayout>
+						<layout:content>
+							<Text id="shipdate" textAlign="End"
+								text="{path:'PR_ass_model>DeliveryDate', 
+                                       formatter: 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatDateShort' }">
+							</Text>
+							<Text id="place" textAlign="End" text="{PR_ass_model>ShipToPlantDescription1}"></Text>
+						</layout:content>
+					</layout:VerticalLayout>
+
+					<!-- value -->
+					<ObjectNumber
+						number="{path:'PR_ass_model>Value', formatter:'ui.s2p.mm.purord.fromrequisition.util.Formatter.lazyFormatNumber'}"
+						unit="{PR_ass_model>Currency}">
+					</ObjectNumber>
+				</cells>
+			</ColumnListItem>
+		</items>
+
+
+	</Table>
+</core:View>

@@ -1,0 +1,129 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m"
+	xmlns:layout="sap.ui.layout" controllerName="ui.s2p.mm.purord.fromrequisition.view.PR_List">
+
+	<layout:VerticalLayout width="100%">
+		<layout:content>
+			<!-- purchase requisition list as table / the unassigned ones (no supplier) -->
+			<Table id="prlist" mode="MultiSelect"
+				noDataText="{i18n>view.POfromPR.general_error_unassigned_message}"
+				items="{PR_appr_model>/PRItemCollection}" inset="false" visible="true">
+				<!-- column descriptions -->
+				<columns>
+					<Column id="column1" hAlign="Begin">
+						<header>
+							<Text id="l1" text="{i18n>view.PR_List.column_id}" wrapping="true"></Text>
+						</header>
+					</Column>
+					<!-- the exception column -->
+					<Column id="column0" width="4%" hAlign="Begin"></Column>
+					<Column id="column2" width="14%" hAlign="Begin"
+						minScreenWidth="large" demandPopin="true">
+						<header>
+							<Text id="l2" text="{i18n>view.PR_List.column_reldate}"
+								wrapping="true"></Text>
+						</header>
+					</Column>
+					<Column id="column4" width="29%">
+						<header>
+							<Text id="l4" text="{i18n>view.PR_List.column_mat}"
+								wrapping="true"></Text>
+						</header>
+					</Column>
+					<Column id="column5" width="16%" hAlign="End">
+						<header>
+							<Text id="l5" text="{i18n>view.PR_List.column_delivery}"
+								wrapping="true"></Text>
+						</header>
+					</Column>
+					<Column id="column6" hAlign="End">
+						<header>
+							<Text id="l6" text="{i18n>view.PR_List.column_val}"
+								wrapping="true"></Text>
+						</header>
+					</Column>
+				</columns>
+				<!-- column list item cells -->
+				<items>
+					<ColumnListItem id="listItem" selected="{PR_appr_model>ItemSelected}"
+						type="Inactive">
+						<!-- cells -->
+						<cells>
+							<!-- PR Item -->
+							<Link id="prnr" press="onPRItem"
+								text="{parts:[{path:'PR_appr_model>PRNumberFormatted'},{path:'PR_appr_model>PRItemFormatted'}], formatter:'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatPRItem'}">
+							</Link>
+							<!-- alert button, icon font e053 to use -->
+							<core:Icon id="mult" press="onMultipleSupplier"
+								color="{parts: [{path:'PR_appr_model>AssignedSupplierCount'}, {path: 'PR_appr_model>Error'}], formatter: '.exceptionColorFormatter' }"
+								src="{parts: [{path:'PR_appr_model>AssignedSupplierCount'}, {path: 'PR_appr_model>Error'}], formatter: '.exceptionFormatter' }"
+								size="1.375em">
+							</core:Icon>
+							<!-- due date -->
+							<Text id="ddate"
+								text="{path:'PR_appr_model>ReleaseDate', formatter: 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatDateShort' }"></Text>
+							<!-- material -->
+							<layout:VerticalLayout>
+								<layout:content>
+									<Text id="matinfo"
+										text="{parts:[{path:'PR_appr_model>ProductDescription'},{path:'PR_appr_model>ProductID'}],
+													formatter:'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatItemDesc'}"></Text>
+									<Text id="quantity"
+										text="{parts:[{path:'PR_appr_model>OpenQuantityFormatted'}, {path:'PR_appr_model>OpenQuantityUnitDescription'}],
+													formatter:'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatMatQuantity'}"></Text>
+									<Text id="priceperquantity"
+										text="{parts:[{path:'PR_appr_model>Price'},{path:'PR_appr_model>Currency'},{path:'PR_appr_model>PriceUnit'},
+													{path:'PR_appr_model>OrderPriceUnitDescription'}],
+													formatter:'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatUnitPrice'}"></Text>
+								</layout:content>
+							</layout:VerticalLayout>
+							<!-- shipping/delivery -->
+							<layout:VerticalLayout>
+								<layout:content>
+									<Text id="shipdate"
+										text="{path:'PR_appr_model>DeliveryDate', formatter: 'ui.s2p.mm.purord.fromrequisition.util.Formatter.formatDateShort'}"></Text>
+									<Text id="place" text="{PR_appr_model>ShipToPlantDescription1}"></Text>
+								</layout:content>
+							</layout:VerticalLayout>
+							<!-- value -->
+							<ObjectNumber
+								number="{path:'PR_appr_model>Value', formatter:'ui.s2p.mm.purord.fromrequisition.util.Formatter.lazyFormatNumber'}"
+								unit="{PR_appr_model>Currency}">
+							</ObjectNumber>
+
+						</cells>
+					</ColumnListItem>
+				</items>
+
+			</Table>
+			<!-- ShowMore Button -->
+			<layout:HorizontalLayout class="EndOfListButton"
+				id="ShowMore" visible="false">
+				<layout:content>
+					<Button id="btnLoad" press="onLoadMoreData" text="{i18n>view.POfromPR.load_more}"
+						type="Transparent"></Button>
+				</layout:content>
+			</layout:HorizontalLayout>
+
+			<!-- No Data Design -->
+			<layout:HorizontalLayout class="EndOfListButton"
+				id="NoData" visible="false">
+				<layout:content>
+					<layout:VerticalLayout>
+						<layout:content>
+							<core:Icon src="sap-icon://competitor" size="13em"
+								color="#007833"></core:Icon>
+							<Text text="{i18n>view.PR_List.no_data}"></Text>
+						</layout:content>
+					</layout:VerticalLayout>
+				</layout:content>
+			</layout:HorizontalLayout>
+
+		</layout:content>
+
+	</layout:VerticalLayout>
+</core:View>

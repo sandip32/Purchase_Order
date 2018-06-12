@@ -1,0 +1,619 @@
+{"results": [
+    {
+        "WorkitemId": "000001000001",
+        "PoNumber": "10014515",
+        "StatusId": "1",
+        "PONumberFormatted": "10014515",        
+        "VendorName": "Yoh Company",
+        "DeliveryDate": "2013-01-17",
+        "CreatedByID": "Eva Adler",
+        "CreatedByName": "Eva Adler",
+        "PoCreationDate": "2013-01-17",
+        "PaymentTermDescription": "14 days 3%, 30/2%, 45 net",
+		"CompanyCode": "1000",
+		"CompanyCodeDescription": "IDES AG",
+		"PlantDesc": "NYC South Side",
+        "TermOfDelivery1": "A",
+        "TermOfDelivery2": "B",
+        "DiffAccData": "",
+        "Value": "1000.00",
+        "ValueFormatted": "1.000,00",
+        "Currency": "EUR",
+        "SupplierName": "Yoh Company",
+        "WiCreatedAt": "2013-02-25T11:00:44",
+        "HeaderAccountingDetails": {
+            "AccountCategoryDescr": "Kostenstelle",
+			"AccountDescription": "",
+			"AccountNumber": "1110",
+			"CumulatedAccountingTypeCode": "1",
+			"CumulatedAccountingTypeCodeName": "",
+			"GlAccountDescription": "Verbrauch Rohstoffe 1",
+			"GlAccountNumber": "400000"
+        },
+        "POProposalItemCollection" : {
+        "results": [
+            {
+                "PoItemNumber": "00010",
+                "ItemCategory": " ",
+                "QtyUnitDescription": "EA",
+                "QuantityFormatted": "2.0",
+                "NetPrice": "200.0",
+                "Currency": "EUR",
+                "PriceUnit": "1",
+                "TotalPrice": "400.0",
+                "ProductDescription": "Brilliance Monitor",
+                "ProductDetails": {
+                    "MaterialID": "9200100",
+                    "Description": "Brilliance Monitor",
+                    "MaterialGroupDescr": "PC Hardware"
+                },
+                "DeliveryDate": "2013-04-11",
+                "DeliveryAddress": {
+                    "AddressString": "Alsterdorfer Strasse 13, 22299 Hamburg, Germany"
+                },
+                "Notes": [
+                    {
+                        "Text": "Please see product description attached.",
+                        "CreatedByName": "Eva Adler",
+                        "CreatedAt": "2013-03-12"
+                    },
+                    {                     
+                        "Text": "Please approve, We need the monitor ASAP.",
+                        "CreatedByName": "Karen White",
+                        "CreatedAt": "2013-03-13"
+                    }
+                ]
+            },
+            {
+                "PoItemNumber": "00020",
+                "ItemCategory": " ",
+                "QtyUnitDescription": "EA",
+                "QuantityFormatted": "10.0",
+                "NetPrice": "50.0",
+                "Currency": "EUR",
+                "PriceUnit": "1",
+                "TotalPrice": "500.0",
+                "ProductDescription": "Apple Keyboard",
+                "ProductDetails": {
+                    "MaterialID": "9200200",
+                    "Description": "Apple Keyboard",
+                    "MaterialGroupDescr": "PC Hardware"
+                }, 
+                "DeliveryDate": "2013-04-11",
+                "DeliveryAddress": {
+                    "AddressString": "Alsterdorfer Strasse 13, 22299 Hamburg, Germany"
+                }
+            },
+            {
+                "PoItemNumber": "00030",
+                "ItemCategory": "D",
+                "QtyUnitDescription": "EA",
+                "QuantityFormatted": "10.0",
+                "NetPrice": "300.0",
+                "Currency": "EUR",
+                "PriceUnit": "1",
+                "TotalPrice": "3000.0",
+                "ProductDescription": "Brilliance Monitor HP",
+                "ProductDetails": {
+                    "MaterialID": "9200101",
+                    "Description": "Brilliance Monitor HP",
+                    "MaterialGroupDescr": "PC Hardware"
+                },
+                "ServiceLines": [
+                   {
+                        "ServiceLineNumber": "0000000010",
+                        "ServiceLineID": "3000000000023",
+                        "Description": "Fine tuning and Consulting",
+                        "LongDescription": "Check the Installation and do the fine tuning and Consulting work.",
+                        "Quantity": "10",
+                        "Unit": "Hour",
+                        "QuantityPerUnit": "1",
+                        "ValuePerUnit": "200",
+                        "Value": "2000.00",
+                        "UnitForValue": "USD",
+	                    "Accountings": [
+	                    	{
+	                    		"AcctLinePercentage": "30%",
+	                    		"GlAccount": "Cost Center",
+	                    		"AcctDescription": "Corporate Services 28651 2335",
+	                    		"GlAccountDescription": "Hardware Installation"
+	                    	},
+	                    	{
+	                    		"AcctLinePercentage": "70%",
+	                    		"GlAccount": "Cost Center",
+	                    		"AcctDescription": "Corporate Services 28651 2335",
+	                    		"GlAccountDescription": "Software Installation"
+	                    	}
+	                    ]
+                    }
+                  ],  
+                "Limits": {
+                    "ValueLimit": "4500",
+                    "ExpectedValue": "3000",
+                    "IsValueUnLimited": "",
+                    "Currency": "EUR",
+                    "LimitsAccountings": [
+                    	{
+                    		"AcctLinePercentage": "30%",
+                    		"GlAccount": "Cost Center",
+                    		"AcctDescription": "Corporate Services 28651 2335",
+                    		"GlAccountDescription": "Hardware Installation"
+                    	},
+                    	{
+                    		"AcctLinePercentage": "70%",
+                    		"GlAccount": "Cost Center",
+                    		"AcctDescription": "Corporate Services 28651 2335",
+                    		"GlAccountDescription": "Hardware Installation"
+                    	}
+                    ]
+                },
+                "DeliveryDate": "2013-04-11",
+                "DeliveryAddress": {
+                    "AddressString": "Alsterdorfer Strasse 13, 22299 Hamburg, Germany"
+                }
+            }
+        ]
+    }
+    },
+    {
+        "WorkitemId": "000001000002",
+        "PoNumber": "10014526",
+        "StatusId": "1",
+        "PONumberFormatted": "10014526",        
+        "VendorName": "APR GmbH",
+        "DeliveryDate": "2013-01-17",
+        "CreatedByID": "Harry Hirsch",
+        "CreatedByName": "Harry Hirsch",
+        "PoCreationDate": "2013-03-17",
+        "PaymentTermDescription": "14 days 3%, 30/2%, 45 net",
+		"CompanyCode": "1000",
+		"CompanyCodeDescription": "IDES AG",
+		"PlantDesc": "NYC South Side",
+        "TermOfDelivery1": "",
+        "TermOfDelivery2": "",
+        "DiffAccData": "X",
+        "Value": "500.00",
+        "ValueFormatted": "500,00",
+        "Currency": "EUR",
+        "SupplierName": "APR GmbH",
+        "WiCreatedAt": "2013-03-20T15:20:44",
+        "HeaderAccountingDetails": {
+            "AccountCategoryDescr": "Kostenstelle 2",
+			"AccountDescription": "",
+			"AccountNumber": "123",
+			"CumulatedAccountingTypeCode": "1",
+			"CumulatedAccountingTypeCodeName": "",
+			"GlAccountDescription": "Verbrauch 1",
+			"GlAccountNumber": "100000"
+        },
+        "POProposalItemCollection" : {
+        "results": [
+            {
+                "PoItemNumber": "00010",
+                "ItemCategory": "B",
+                "QtyUnitDescription": "EA",
+                "QuantityFormatted": "2.0",
+                "NetPrice": "600.0",
+                "Currency": "EUR",
+                "PriceUnit": "1",
+                "TotalPrice": "1200.0",
+                "ProductDescription": "BlackBerry 990",
+                "ProductDetails": {
+                    "MaterialID": "9200301",
+                    "Description": "BlackBerry 990",
+                    "MaterialGroupDescr": "Smart phones"
+                },
+                "Limits": {
+                    "ValueLimit": "1400",
+                    "ExpectedValue": "1200",
+                    "IsValueUnLimited": "",
+                    "Currency": "EUR",
+                    "LimitsAccountings": [
+                    	{
+                    		"AcctLinePercentage": "30%",
+                    		"GlAccount": "Cost Center",
+                    		"AcctDescription": "Corporate Services 28651 2335",
+                    		"GlAccountDescription": "Hardware Installation"
+                    	},
+                    	{
+                    		"AcctLinePercentage": "70%",
+                    		"GlAccount": "Cost Center",
+                    		"AcctDescription": "Corporate Services 28651 2335",
+                    		"GlAccountDescription": "Hardware Installation"
+                    	}
+                    ]
+                },
+                "DeliveryDate": "2013-04-30",
+                "DeliveryAddress": {
+                    "AddressString": "Kriegstrasse 51, 76131 Karlsruhe, Germany"
+                },
+                "Notes": [
+                    {
+                        "Text": "Please approve, the requirement is aligned.",
+                        "CreatedByName": "Harry Hirsch",
+                        "CreatedAt": "2013-03-15"
+                    }
+                ]
+            },
+            {
+                "PoItemNumber": "00020",
+                "ItemCategory": "B",
+                "QtyUnitDescription": "EA",
+                "QuantityFormatted": "3.0",
+                "NetPrice": "650.0",
+                "Currency": "EUR",
+                "PriceUnit": "1",
+                "TotalPrice": "1950.0",
+                "ProductDescription": "Limit Item for iPhone5",
+                "ProductDetails": {
+                    "MaterialID": "",
+                    "Description": "",
+                    "MaterialGroupDescr": "Smart phones"
+                },
+                "Limits": {
+                    "ValueLimit": "2500",
+                    "ExpectedValue": "1950",
+                    "IsValueUnLimited": "",
+                    "Currency": "EUR",
+                    "LimitsAccountings": [
+                    	{
+                    		"AcctLinePercentage": "30%",
+                    		"GlAccount": "Cost Center",
+                    		"AcctDescription": "Corporate Services 28651 2335",
+                    		"GlAccountDescription": "Hardware Installation"
+                    	},
+                    	{
+                    		"AcctLinePercentage": "70%",
+                    		"GlAccount": "Cost Center",
+                    		"AcctDescription": "Corporate Services 28651 2335",
+                    		"GlAccountDescription": "Hardware Installation"
+                    	}
+                    ]
+                },
+                "DeliveryDate": "2013-04-30",
+                "DeliveryAddress": {
+                    "AddressString": "Kriegstrasse 51, 76131 Karlsruhe, Germany"
+                }
+            },
+            {
+                "PoItemNumber": "00030",
+                "ItemCategory": "D",
+                "QtyUnitDescription": "EA",
+                "QuantityFormatted": "10.0",
+                "NetPrice": "590.0",
+                "Currency": "EUR",
+                "PriceUnit": "1",
+                "TotalPrice": "5900.0",
+                "ProductDescription": "Apple IPad Mini 32 GB WiFi",
+                "ProductDetails": {
+                    "MaterialID": "9200401",
+                    "Description": "Apple IPad Mini 32 GB WiFi",
+                    "MaterialGroupDescr": "Smart phones"
+                },
+                "ServiceLines": [
+                   {
+                        "ServiceLineNumber": "0000000010",
+                        "ServiceLineID": "3000000000023",
+                        "Description": "Fine tuning and Consulting",
+                        "LongDescription": "Check the Installation and do the fine tuning and Consulting work.",
+                        "Quantity": "10",
+                        "Unit": "Hour",
+                        "QuantityPerUnit": "1",
+                        "ValuePerUnit": "200",
+                        "Value": "2000.00",
+                        "UnitForValue": "USD",
+	                    "Accountings": [
+	                    	{
+	                    		"AcctLinePercentage": "30%",
+	                    		"GlAccount": "Cost Center",
+	                    		"AcctDescription": "Corporate Services 28651 2335",
+	                    		"GlAccountDescription": "Hardware Installation"
+	                    	},
+	                    	{
+	                    		"AcctLinePercentage": "70%",
+	                    		"GlAccount": "Cost Center",
+	                    		"AcctDescription": "Corporate Services 28651 2335",
+	                    		"GlAccountDescription": "Software Installation"
+	                    	}
+	                    ]
+                    }
+                  ],  
+                "Limits": {
+                    "ValueLimit": "1111",
+                    "ExpectedValue": "100500",
+                    "IsValueUnLimited": "",
+                    "Currency": "EUR",
+                    "LimitsAccountings": [
+                    	{
+                    		"AcctLinePercentage": "30%",
+                    		"GlAccount": "Cost Center",
+                    		"AcctDescription": "Corporate Services 28651 2335",
+                    		"GlAccountDescription": "Hardware Installation"
+                    	},
+                    	{
+                    		"AcctLinePercentage": "70%",
+                    		"GlAccount": "Cost Center",
+                    		"AcctDescription": "Corporate Services 28651 2335",
+                    		"GlAccountDescription": "Hardware Installation"
+                    	}
+                    ]
+                },
+                "DeliveryDate": "2013-04-30",
+                "DeliveryAddress": {
+                    "AddressString": "Kriegstrasse 51, 76131 Karlsruhe, Germany"
+                }
+            }
+        ]
+    }
+    },
+    {
+        "WorkitemId": "000001000003",
+        "PoNumber": "10014534",
+        "StatusId": "2",
+        "PONumberFormatted": "10014534",        
+        "VendorName": "1000 C.E.B. BERLIN",
+        "DeliveryDate": "2013-01-17",
+        "CreatedByID": "Rita Grimm",
+        "CreatedByName": "Rita Grimm",
+        "PoCreationDate": "2013-03-17",
+        "PaymentTermDescription": "14 days 3%, 30/2%, 45 net",
+		"CompanyCode": "1000",
+		"CompanyCodeDescription": "IDES AG",
+		"PlantDesc": "NYC South Side",
+        "DiffAccData": "",
+        "ValueFormatted": "2.300,00",
+        "Value": "2300.00",
+        "Currency": "EUR",
+        "SupplierName": "Rita Grimm",
+        "WiCreatedAt": "2013-05-15T10:00:44",
+        "HeaderAccountingDetails": {
+            "AccountCategoryDescr": "Kostenstelle",
+			"AccountDescription": "",
+			"AccountNumber": "50",
+			"CumulatedAccountingTypeCode": "1",
+			"CumulatedAccountingTypeCodeName": "",
+			"GlAccountDescription": "Verbrauch Rohstoffe 1",
+			"GlAccountNumber": "400000"
+        },
+        "POProposalItemCollection" : {
+        "results": [
+            {
+                "PoItemNumber": "00010",
+                "ItemCategory": "B",
+                "QtyUnitDescription": "EA",
+                "QuantityFormatted": "2.0",
+                "NetPrice": "800.0",
+                "Currency": "EUR",
+                "PriceUnit": "1",
+                "TotalPrice": "1600.0",
+                "ProductDescription": "Thermostat 302",
+                "ProductDetails": {
+                    "MaterialID": "9205502",
+                    "Description": "Thermostat 302",
+                    "MaterialGroupDescr": "Electronics"
+                }, 
+                "Limits": {
+                    "ValueLimit": "1111",
+                    "ExpectedValue": "100500",
+                    "IsValueUnLimited": "X",
+                    "Currency": "EUR",
+                    "LimitsAccountings": [
+                    	{
+                    		"AcctLinePercentage": "30%",
+                    		"GlAccount": "Cost Center",
+                    		"AcctDescription": "Corporate Services 28651 2335",
+                    		"GlAccountDescription": "Hardware Installation"
+                    	},
+                    	{
+                    		"AcctLinePercentage": "70%",
+                    		"GlAccount": "Cost Center",
+                    		"AcctDescription": "Corporate Services 28651 2335",
+                    		"GlAccountDescription": "Hardware Installation"
+                    	}
+                    ]
+                },
+                "DeliveryDate": "2013-04-25",
+                "DeliveryAddress": {
+                    "AddressString": "Rosenheimer Strasse 201, 80331 Munich, Germany"
+                },
+                "Notes": [
+                    {
+                        "Text": "Please approve. We need the thermostat ASAP.",
+                        "CreatedByName": "Rita Grimm",
+                        "CreatedAt": "2013-03-17"
+                    }
+                ]
+            }
+        ]
+    }
+    },
+    {
+        "WorkitemId": "000001000004",
+        "PoNumber": "10014545",
+        "StatusId": "1",
+        "PONumberFormatted": "10014545",        
+        "VendorName": "Cambridge Technology Partners",
+        "DeliveryDate": "2013-04-17",
+        "PoCreatorUser": "Frank Carlton",
+        "PoCreationDate": "2013-03-25",
+        "PaymentTermDescription": "14 days 3%, 30/2%, 45 net",
+		"CompanyCode": "1000",
+		"CompanyCodeDescription": "IDES AG",
+		"PlantDesc": "NYC South Side",
+        "DiffAccData": "",
+        "ValueFormatted": "20,00",
+        "Value": "20.00",
+        "Currency": "EUR",
+        "SupplierName": "Frank Carlton",
+        "WiCreatedAt": "2013-10-22T20:22:22",
+        "HeaderAccountingDetails": {
+            "AccountCategoryDescr": "Kostenstelle",
+			"AccountDescription": "",
+			"AccountNumber": "1110",
+			"CumulatedAccountingTypeCode": "1",
+			"CumulatedAccountingTypeCodeName": "",
+			"GlAccountDescription": "Verbrauch Rohstoffe 1",
+			"GlAccountNumber": "400000"
+        },
+        "POProposalItemCollection" : {
+        "results": [
+            {
+                "PoItemNumber": "00010",
+                "ItemCategory": "D",
+                "QtyUnitDescription": "EA",
+                "QuantityFormatted": "1000.0",
+                "NetPrice": "1000.0",
+                "Currency": "USD",
+                "PriceUnit": "1",
+                "TotalPrice": "10000.0",
+                "ProductDescription": "Installation",
+                "ProductDetails": {
+                    "MaterialID": "9205502",
+                    "Description": "Installation",
+                    "MaterialGroupDescr": "Installation Services"        
+                },
+                "DeliveryDate": "2013-04-25",
+                "DeliveryAddress": {
+                    "AddressString": "3618 El Camino Way, 40123 New York, USA"
+                },
+                "Notes": [
+                    {
+                        "Text": "Please approve. We need the Installation ASAP.",
+                        "CreatedByName": "Frank Carlton",
+                        "CreatedAt": "2013-03-25"
+                    }
+                ],
+                "ServiceLines": [
+                   {
+                        "ServiceLineNumber": "0000000010",
+                        "ServiceLineID": "3000000000014",
+                        "Description": "Hardware Installation",
+                        "LongDescription": "Hardware Installation",
+                        "Quantity": "10",
+                        "Unit": "Hour",
+                        "QuantityPerUnit": "1",
+                        "ValuePerUnit": "100",
+                        "Value": "10000.00",
+                        "UnitForValue": "USD",
+	                    "Accountings": [
+	                    	{
+	                    		"AcctLinePercentage": "30%",
+	                    		"GlAccount": "Cost Center",
+	                    		"AcctDescription": "Corporate Services 28651 2335",
+	                    		"GlAccountDescription": "Hardware Installation"
+	                    	},
+	                    	{
+	                    		"AcctLinePercentage": "70%",
+	                    		"GlAccount": "Cost Center",
+	                    		"AcctDescription": "Corporate Services 28651 2335",
+	                    		"GlAccountDescription": "Software Installation"
+	                    	}
+	                    ]
+                    },
+                    {
+                        "ServiceLineNumber": "0000000020",
+                        "ServiceLineID": "3000000000015",
+                         "Description": "Software Installation",
+                         "LongDescription": "Software Installation",
+                        "Quantity": "15",
+                        "Unit": "Hour",
+                        "QuantityPerUnit": "1",
+                        "ValuePerUnit": "100",
+                        "Value": "1500.00",
+                        "UnitForValue": "USD",
+	                    "Accountings": [
+	                    	{
+	                    		"AcctLinePercentage": "30%",
+	                    		"GlAccount": "Cost Center",
+	                    		"AcctDescription": "Corporate Services 28651 2335",
+	                    		"GlAccountDescription": "Hardware Installation"
+	                    	},
+	                    	{
+	                    		"AcctLinePercentage": "70%",
+	                    		"GlAccount": "Cost Center",
+	                    		"AcctDescription": "Corporate Services 28651 2335",
+	                    		"GlAccountDescription": "Software Installation"
+	                    	}
+	                    ]
+                    } 
+                ]
+            },     
+            {
+                "PoItemNumber": "00020",
+                "ItemCategory": "D",
+                "QtyUnitDescription": "EA",
+                "QuantityFormatted": "1.0",
+                "NetPrice": "5000.0",
+                "Currency": "USD",
+                "PriceUnit": "1",
+                "TotalPrice": "5000.0",
+                "ProductDescription": "Consulting Service",
+                "ProductDetails": {
+                    "MaterialID": "9205503",
+                    "Description": "Consulting Service",
+                    "MaterialGroupDescr": "Consulting Services"        
+                },
+                "DeliveryDate": "2013-04-25",
+                "DeliveryAddress": {
+                    "AddressString": "3618 El Camino Way, 40123 New York, USA"
+                },
+                "Notes": [
+                    {
+                        "Text": "Please approve. We need the service ASAP.",
+                        "CreatedByName": "Frank Carlton",
+                        "CreatedAt": "2013-03-25"
+                    }
+                ],
+                "ServiceLines": [
+                   {
+                        "ServiceLineNumber": "0000000010",
+                        "ServiceLineID": "3000000000023",
+                        "Description": "Fine tuning and Consulting",
+                        "LongDescription": "Check the Installation and do the fine tuning and Consulting work.",
+                        "Quantity": "10",
+                        "Unit": "Hour",
+                        "QuantityPerUnit": "1",
+                        "ValuePerUnit": "200",
+                        "Value": "2000.00",
+                        "UnitForValue": "USD",
+	                    "Accountings": [
+	                    	{
+	                    		"AcctLinePercentage": "30%",
+	                    		"GlAccount": "Cost Center",
+	                    		"AcctDescription": "Corporate Services 28651 2335",
+	                    		"GlAccountDescription": "Hardware Installation"
+	                    	},
+	                    	{
+	                    		"AcctLinePercentage": "70%",
+	                    		"GlAccount": "Cost Center",
+	                    		"AcctDescription": "Corporate Services 28651 2335",
+	                    		"GlAccountDescription": "Software Installation"
+	                    	}
+	                    ]
+                    }
+                  ],  
+                "Limits": {
+                    "ValueLimit": "1111",
+                    "ExpectedValue": "100500",
+                    "IsValueUnLimited": "X",
+                    "Currency": "USD",
+                    "LimitsAccountings": [
+                    	{
+                    		"AcctLinePercentage": "30%",
+                    		"GlAccount": "Cost Center",
+                    		"AcctDescription": "Corporate Services 28651 2335",
+                    		"GlAccountDescription": "Hardware Installation"
+                    	},
+                    	{
+                    		"AcctLinePercentage": "70%",
+                    		"GlAccount": "Cost Center",
+                    		"AcctDescription": "Corporate Services 28651 2335",
+                    		"GlAccountDescription": "Hardware Installation"
+                    	}
+                    ]
+                }
+            }
+        ]
+    }
+    }
+]}

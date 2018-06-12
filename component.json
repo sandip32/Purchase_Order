@@ -1,0 +1,9 @@
+{
+    "name": "ui.s2p.mm.purord.fromrequisition",
+    "version": "1.0",    
+    "main": "Main.controller.js",    
+    "dependencies": {
+        "sap.m": "1.7"
+    }
+    
+}

@@ -1,0 +1,53 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m"     xmlns:core.mvc="sap.ui.core.mvc"
+	controllerName="ui.s2p.mm.purord.fromrequisition.view.POfromPR">
+	<Page id="POfromPR_Page" title="{i18n>FULLSCREEN_TITLE}"
+		enableScrolling="true">
+		
+		<customHeader>
+			<Bar id="HeaderBar">
+				<contentLeft>
+					<Button id="HomeButton" press="onHome" visible="false"
+						icon="sap-icon://home"></Button>
+				</contentLeft>
+				<contentMiddle>
+					<Label text="{i18n>view.POfromPR.title}"></Label>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+
+		<content>
+			<IconTabBar id="IconizedFilter" select="switchView"
+				selectedKey="Released" expandable="false">
+				<items>
+					<IconTabFilter id="btnPRreleased" text="{i18n>view.POfromPR.approved}"
+						key="Released" icon="sap-icon://approvals" design="Horizontal"></IconTabFilter>
+					<IconTabSeparator icon="sap-icon://process"></IconTabSeparator>
+					<IconTabFilter id="btnPRassigned" text="{i18n>view.POfromPR.assigned}"
+						key="Assigned" count="Loading..." icon="sap-icon://supplier" design="Horizontal"></IconTabFilter>
+					<IconTabSeparator icon="sap-icon://process"></IconTabSeparator>
+					<IconTabFilter id="btnPOsimulated" text="{i18n>view.POfromPR.proposal}"
+						key="Simulated" icon="sap-icon://inspection" design="Horizontal"></IconTabFilter>
+					<IconTabSeparator icon="sap-icon://process"></IconTabSeparator>
+					<IconTabFilter id="btnPOcreated" text="{i18n>view.POfromPR.created}"
+						key="Created" icon="sap-icon://documents" design="Horizontal"></IconTabFilter>
+				</items>
+
+				<content>
+				<ScrollContainer id="ScrollCont"
+						horizontal="false" vertical="true">
+						<content>
+							<core.mvc:XMLView id="ui.s2p.mm.purord.fromrequisition.PR_Released_View"
+								viewName="ui.s2p.mm.purord.fromrequisition.view.PR_List"></core.mvc:XMLView>
+						</content>
+					</ScrollContainer>
+				</content>
+
+			</IconTabBar>
+		</content>
+	</Page>
+</core:View>
